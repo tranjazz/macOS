@@ -1,0 +1,14 @@
+#1、先检查mac系统下是否安装了cabextract，可直接运行
+      brew install cabextract
+#2、最好先创建一个目录，放置接下来要下载的包
+      cd ~/Downloads
+      mkdir consolas
+      cd consolas
+#3、下载所需要的包(这里网上很多都贴的是微软下载地址，但是那个地址早就过期了)
+      curl -LO https://sourceforge.net/projects/mscorefonts2/files/cabs/PowerPointViewer.exe
+#4、提取cab后缀包，并安装字体
+      cabextract PowerPointViewer.exe
+      cabextract ppviewer.cab
+      open CONSOLA*.TTF
+最后在弹出的弹窗中点击安装字体就行了。
+
